@@ -16,89 +16,13 @@ html{
 /* Header */
 
 
-@-webkit-keyframes slideInDown {
-    from {
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-      visibility: visible;
-    }
-  
-    to {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  }
-  
-  @keyframes slideInDown {
-    from {
-      -webkit-transform: translate3d(0, -100%, 0);
-      transform: translate3d(0, -100%, 0);
-      visibility: visible;
-    }
-  
-    to {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  }
-  
-  .slideInDown {
-    -webkit-animation-name: slideInDown;
-    animation-name: slideInDown;
-  }
-  
-  .animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-  }
-  @-webkit-keyframes slideInUp {
-    from {
-      -webkit-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0);
-      visibility: visible;
-    }
-  
-    to {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  }
-  
-  @keyframes slideInUp {
-    from {
-      -webkit-transform: translate3d(0, 100%, 0);
-      transform: translate3d(0, 100%, 0);
-      visibility: visible;
-    }
-  
-    to {
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-    }
-  }
-  
-  .slideInUp {
-    -webkit-animation-name: slideInUp;
-    animation-name: slideInUp;
-  }
-  
-  .animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-  }
-#header{
-    padding-bottom: 7%;
-    
-    /* margin-right: 10%; */
-}
+
+
 #navbar{
     transition: 0.6s;
     position: fixed;
     width: 100%;
+    opacity: 0.8;
     background-color: #ffffff;
     padding-left : 3%;
     padding-right: 8%;
@@ -181,9 +105,9 @@ nav ul li a:hover::after{
     display:flex;
     justify-content: right;
     /* margin-right: 20%; */
-    /* padding-right: 10%; */
-    margin-top: 8%;
-    flex-basis: 20%;
+    padding-right: 8%;
+    margin-top: 4%;
+    flex-basis: 40%;
     width: 70%;
 }
 #image1{
@@ -201,7 +125,45 @@ nav ul li a:hover::after{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
+.animaa {
+    height:50px;
+    overflow:hidden;
+    margin-left: 1rem;
+  }
+  
+  .animaa > div > div {
+    padding: 0.25rem 0.75rem;
+    height:2.81rem;
+    margin-bottom: 2.81rem;
+    display:inline-block;
+  }
+  
+  .animaa div:first-child {
+    animation: text-animation 8s infinite;
+  }
+  
+  .first div {
+    background-color:#20a7d8;
+  }
+  .second div {
+    background-color:#CD921E;
+  }
+  .third div {
+    background-color:#c10528;
+  }
+  
+  @keyframes text-animation {
+    0% {margin-top: 0;}
+    10% {margin-top: 0;}
+    20% {margin-top: -5.62rem;}
+    30% {margin-top: -5.62rem;}
+    40% {margin-top: -11.24rem;}
+    60% {margin-top: -11.24rem;}
+    70% {margin-top: -5.62rem;}
+    80% {margin-top: -5.62rem;}
+    90% {margin-top: 0;}
+    100% {margin-top: 0;}
+  }
 .header-text{
     margin-top: 4;
     margin-left: 8%;
@@ -294,22 +256,11 @@ nav ul li a:hover::after{
     border-radius: 20%;
 }
 
-
-
-
 /* Header Over */
 
 
 
 /* About */
-
-
-
-
-
-
-
-
 
 
 .row{
@@ -324,8 +275,8 @@ nav ul li a:hover::after{
     padding: 100px 0;
     padding-right: 80px;
     color: #080808;
-    margin-bottom: 13%;
-    height: 95vh;
+    margin-bottom: 10%;
+    height: 80vh;
     /* margin-top: 5%; */
     /* padding-bottom: 6%; */
 }
@@ -482,7 +433,7 @@ nav ul li a:hover::after{
     height: 95vh;
     display: grid;
     place-items: center;
-    padding-top: 3%;
+    padding-top: 3.3%;
     margin-bottom: 3%;
 }
 #projects H2{
@@ -493,7 +444,7 @@ nav ul li a:hover::after{
     border-right-style: hidden;
     border-top-style: hidden;
     /* box-shadow: 0px 1px 0px #152658; */
-    width: 10%;
+    width: 12%;
     /* margin-left: 44%; */
 }
 .rowofp:nth-child(3){
@@ -511,22 +462,69 @@ nav ul li a:hover::after{
 }
 .columnofp{
     text-align: center;
-    box-shadow: 1px 1px 5px rgb(12, 18, 138);
+    /* box-shadow: 0px 0px 5px rgb(86, 94, 243); */
     width: 40%;
     height: 100%;
-    border-radius: 3%;
-    background-color: rgb(10, 9, 82);
     
+}
+
+.firstpr{
+    background-image: url(images/Screenshot\ \(6\).png);
+}
+.secondpr{
+    background-image: url(images/Screenshot\ \(3\).png);
+    
+}
+.thirdpr{
+    background-image: url(images/Screenshot\ \(8\).png);
+}
+.project:hover{
+    opacity: 30%;
+    transform: scale(1.08);
+    border-radius:20%;
 }
 .project{
     width: 100%;
     height: 100%;
-    /* background-size: 100% 200%; */
+    background-size: 100% 100%;
+    transition: 0.5s;
+    /* background-image: url(images/Screenshot\ \(3\).png);     */
+}
+.project:hover .columnofp h3, .project:hover .columnofp p{
+    z-index: 2  ;
+}
+.columnofp h3{
+    position: absolute;
+    text-align: center;
+    width: 90%;
+    left: 5%;
+    bottom: 70%;
+    z-index: -1;
+    padding-bottom: 3% ;
+    box-shadow: 0px 1px 0px white;
+}
+.columnofp p{
+    position: absolute;
+    text-align: center;
+    width: 50%;
+    left: 24%;
+    bottom: 10%;
+    z-index: -1;
+    padding-bottom: 3% ;
+    box-shadow: 0px 1px 0px white;
+}
+.prgimg{
+    position: relative;
+    height: 10%;
+    width: 10%;
 }
 
+  
 
 
 /* Projects over */
+
+
 
 
 
@@ -534,7 +532,7 @@ nav ul li a:hover::after{
 
 #contact{
     height: 95vh;
-    padding-top: 3%;
+    padding-top: 6%;
     width: 100%;
     /* background-color: ; */
 }
@@ -547,7 +545,7 @@ nav ul li a:hover::after{
     border-top-style: hidden;
     /* box-shadow: 0px 1px 0px #152658; */
     width: 14%;
-    margin-left: 44%;
+    margin-left: 43%;
     /* padding */
 }
 .rowofc{
@@ -668,7 +666,7 @@ label{
 .Name{
     margin-bottom: 5%;
 }
-.subbtn input{
+.subbtn button{
     background-color: #0077b5;
     cursor: pointer;
     padding: 2.4%;
@@ -679,12 +677,100 @@ label{
     font-size: 16px;
     transition: 0.4s;
 }
-.subbtn input:hover{
+.subbtn button:hover{
     background-color: black;
+    color: white;
     box-shadow: 0px 0px 6px #0077b5;
 }
 
-@media (min-width: 300px) and (max-width: 500px){
+
+
+/* endpart */
+
+.endpart{
+    height: 46vh;
+    /* background-color: #152658;*/
+    /* border: 3px solid red; */
+    position: relative;
+    background-image: linear-gradient(to right,black,rgb(33, 81, 163),rgb(33, 81, 163),rgb(19, 43, 114),rgba(255,0,0,0));
+    transition: 0.5s;
+    margin-top: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.endpart p{
+    position: relative;
+    top: 13vw;
+    left: -3vw;
+    height: min-content;
+    /* opacity: 0; */
+    display: none;
+}
+.upero{
+    animation: move 2s;
+    animation-iteration-count: infinite;
+    position: relative;
+    border-radius: 50%;
+    width: 5.0%;
+    top: 39%;
+    left: 7.5%;
+    height: 20%;
+    background-image: url(images/up-arrow.png);
+    background-size: cover;
+    
+}
+
+.upero:hover{
+    cursor: pointer;       
+}
+@keyframes move {
+    0%{top: 36%}
+    50%{top: 42%;}
+    100%{top:36%;}
+}
+.enddetail{
+    height: 70%;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    width: 50%;
+    margin-left: 7%;
+    border-top-style: hidden;
+    border-bottom-style: hidden;
+    margin-top: 3.3%;
+    font-size: 3vh;
+    text-align: center;
+    
+}
+.NAme{
+    font-size: 30px;
+    color: rgb(7, 24, 57, 1);
+    opacity: 100%;
+    display: none;
+}
+.thanks{
+    margin-top: 6%;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+}
+.thanks h1{
+    margin-top: 5%;
+    font-weight: 1000;
+}
+.endimg{
+    box-shadow: -5px 0px 4px black;
+    width: 13%;
+    margin-right: 9%;
+    height: 60%;
+    margin-top: 4.2%;
+    border-radius: 50%;
+    background-image: url(images/mrpriyanksoni.jpg);
+    background-size: cover;
+}
+
+
+
+
+@media (min-width: 300px) and (max-width: 600px){
     body{
         width: 100%;
     }
@@ -695,7 +781,7 @@ label{
     }
 
     .drpdwn{
-        display: flex;
+        /* display: flex; */
         height: 40%;
         padding: 4% 4%;
         padding-right: 0;
@@ -703,6 +789,10 @@ label{
     #navbar{
         display: flex;
         justify-content:space-between;
+
+    }
+    .logo{
+        padding-bottom: 5%;
     }
     nav{
         height: 100%;
@@ -742,31 +832,44 @@ label{
         font-size: 12vw;
     }
     #img1{
-        display: flex;
-        margin-left: 16%;
+        flex-basis: 100%;
         justify-content: center;
+        /* margin-left: 23%; */
+        padding: 0;
+        width: 100%;
+        left: 30%;
+        
     }
     #image1{
-        height: auto;
-        max-width: 100%;
+        height: max-content;
+        width: 70vw;
     }
     .social-icons{
-        left: 10%;
-        display: none;
+        left: -8%;
+        top: 75%;
+        /* display: none; */
+    }
+    .social-icons ul li{
+        margin-left: 40%;
+        padding: 4%;
+    }
+    .social-icons ul li:hover{
+        margin-left: 40%;
     }
     .iconlist a span{
         display: none;
     }
     .iconlist a i{
         padding :10%;
+        padding-bottom: 20%;
     }
     #about{
         margin: 0;   
         padding: 0%;
-        height: 830px;
+        height: 109vh;
     }
+    
     .row{
-        height: 700px;
         width: 100%;
         display:contents;
         justify-content: space-around;
@@ -860,7 +963,11 @@ label{
     .tab-contents ul li{
         font-size: 12px;
     }
+    #projects{
+        justify-items: center;
+    }
     #projects h2{
+        
         padding-top: 8%;
         text-align: center;
         font-size: 8vw;
@@ -872,9 +979,40 @@ label{
         text-align: center;
         font-size: 8vw;
     }
+    .rowofp{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        height: 40vh;
+    }
+    .rowofp:nth-child(2){
+        margin-top: 6%;
+    }
+    .rowofp:nth-child(3){
+        margin-top: 0;
+    }
+    .columnofp{
+        width: 70%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        height: 30vw;
+    }  
+    .columnofp p{
+        display: none;
+    }
+    .columnofp h3{
+        display: none;
+    }
+    .project:hover{
+        transform: scale(100%);
+    }
+     .project{
+        padding: 10%;
+    }
+
     .rowofc{
         margin-top: 10%;
-        height: 560px;
+        height: 77.56vh;
         max-width: 100%;
         margin-left: 11%;
         padding: 0.5%;
@@ -929,12 +1067,47 @@ label{
     label{
         font-size: 14px;
     }
-    .subbtn input{
+    .subbtn button{
         border-radius: 0;
         box-shadow: 0px 0px 3px #0077b5;
         font-size: 13px;
         font-weight: 100;
+        color: white;
         size: 10%;
         background-color: #000;
+    }
+    .endpart{
+        display:list-item;
+        height: 82vh;
+        margin-top: 15vw;
+    }
+    .upero{
+        display: none;
+    }
+    .endpart p{
+        display: none;
+    }
+    .enddetail{
+        position: relative;
+        left: 17vw;
+        height: 60%;
+        padding-top: 4%;
+    }
+    .thanks{
+        padding-top: 10%;
+    }
+    .thanks h1{
+        margin-top: 10vh;
+    }
+    .NAme{
+        font-size: 20px;
+        
+    }
+    .endimg{
+        position: relative;
+        width: 40vw;
+        height: 40vw;
+        display: flex;
+        left: 30vw;
     }
 }
