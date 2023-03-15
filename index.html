@@ -10,8 +10,11 @@
     <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Space Grotesk">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.scss">
     <title> Priyank Soni </title>
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script>
         window.addEventListener("scroll", function(){
@@ -57,13 +60,15 @@
         <div class="after-nav">
             <div class="header-text">
                 
-                
-                <p class="animated slideInDown"> &diams; <b>Web Developer</b></p>
-                <p class="animated slideInDown"><b> &diams; <b>Programmer</b></p>
+                <section class="animaa">
+                    <div class="webd"><div> &diams; Web Developer</div></div>
+                    <div class="webd"> <div> &diams; Programmer</div></div>
+                    <div class="webd"> <div> &diams; UI designer</div></div>
+                </section>
                 <br>
                 <H1 class="animated slideInUp">Hii, I'm <span>P</span>riyank <span>P</span>atadiya <br>from Gujarat, India.</H1>
             </div>
-            <div id="img1">
+            <div id="img1" data-aos="zoom-out" data-aos-duration="1000">
                 <!-- <img id="image1"src="images/—Pngtree—flat design concept of programmers_5870919.png" alt=""> -->
                 <img id="image1"src="https://i.pinimg.com/originals/f6/4a/3e/f64a3ed4da26ddb0d98447a9b5b638c5.gif" alt="">
                 
@@ -151,22 +156,27 @@
             <H2>Projects</H2>
         
         <div class="rowofp">
-            <div class="columnofp">
-                <div class="project">nothing</div>
-                
+            <div class="columnofp" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
+                <div class="project firstpr" ></div>    
+                <h3>TextUtils</h3>
             </div>
-            <div class="columnofp">
-                <div class="project">nothing</div>
-                
+            <div class="columnofp" data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
+                <div class="project secondpr "></div>
+                <h3>Tic-Tac-Toe</h3>
             </div>
         </div>
         <div class="rowofp">
-            <div class="columnofp">
-                <div class="project">nothing</div>
-                
+            <div class="columnofp"data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
+                <div class="project thirdpr"></div>
+                <h3>NewsMantra</h3>
+                <p>This web app is help to make changes in ur typed paragraphs by just clicking buttons, this web app is mainly made with  </p>
             </div>
-            <div class="columnofp">
-                <div class="project">nothing</div>
+            <div class="columnofp"data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
+                <div class="project fourthpr"></div>
                 
             </div>
         </div>
@@ -174,6 +184,9 @@
 
 
     <!-- project over -->
+
+    
+
 
 
 
@@ -213,29 +226,48 @@
                     <div class="msghead">
                         <h3>Message</h3>
                     </div>
-                <form action="">
+                <form action="" onsubmit="sendEmail(); reset(); return false;">
                     <div class="Name">
                         <label for="text">Name : </label>
                         <br>
                         
-                        <input type="text">
+                        <input type="Name" id="name">
                     </div>
                     <div class="yourmail">
                         <label for="text">Email : </label>
                         <br>
-                        <input type="text" name="" id="">
+                        <input type="email" name="" id="email">
                     </div>
                     <div class="sendmsg">
                         <label for="text">Message:</label><br>
                         <textarea name="" id="" cols="40" rows="4"></textarea>
                     </div>
                     <div class="subbtn">
-                        <input type="submit" value="Send Message">
+                        <button type="submit" value="Send Message">Send msg</button>
                     </div>
                 </form>
             </div>
         </div>
-    </d>
+    </div>
+
+    <div class="endpart">
+        <div class="upero" onclick="gototop()">
+            
+        </div>
+        <p>Back To Top</p>
+        <div class="enddetail">
+            <div class="NAme">
+                Priyank P Patadiya
+            </div>
+            <div class="thanks">
+                Thank you for giving your precious time to visit my Portfolio.
+                    <h1>Thankyou    </h1>
+            </div>
+        </div>
+        <div class="endimg">
+            
+        </div>
+    </div>
 
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
@@ -253,6 +285,32 @@
         }
 
         
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        var upero = document.getElementsByClassName("upero");
+        function gototop(){
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "priyankppatadiya@gmail.com",
+                Password : "35D9C4E36440CF6BE4594EEC3D464EC95EAD",
+                To : 'priyankppatadiya@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form inquiry",
+                Body : "Name : " + document.getElementById("name").value
+            }).then(
+            message => alert(message)
+            );
+        }
     </script>
 </body>
 </html>
